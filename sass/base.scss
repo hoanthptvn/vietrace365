@@ -1,0 +1,410 @@
+@charset "utf-8";
+@import "import";
+a[href*="tel:"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #fff;
+  @include media(sp) {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}
+body {
+  @include media(sp) {
+    img {
+      width: 100%;
+    }
+  }
+}
+/* ==================================================
+	basic layout
+================================================== */
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: $black;
+  overflow: hidden;
+  font-size: 1.4rem;
+  min-width: 320px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-y: auto;
+  line-height: normal;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  vertical-align: top;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+.ov_hover:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha( opacity=70)";
+}
+a {
+  color: #000000;
+  text-decoration: underline;
+  transition: all linear 0.3s;
+}
+a:hover {
+  text-decoration: none;
+}
+/* サイト幅
+-------------------------------------------------- */
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  @include media(pc) {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+  }
+}
+
+/* ==================================================
+	header
+================================================== */
+.header {
+  position: relative;
+  .container {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__nav {
+    margin-right: 106px;
+  }
+
+  .nav {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+
+    &__item {
+      height: inherit;
+      margin-right: 56px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & > a {
+        position: relative;
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: -29px;
+          height: 3px;
+          width: 0;
+          background: #4a8ecc;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+        }
+      }
+      i {
+        font-size: 14px;
+      }
+      &:hover {
+        .sub_menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0px);
+        }
+      }
+      .sub_menu {
+        position: absolute;
+        top: 100%;
+        min-width: 200px;
+        background-color: #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2%);
+        transition: transform 0.2s ease-out;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        padding: 10px 10px 0px 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 33px;
+          width: 100%;
+          top: -33px;
+        }
+        li {
+          a {
+            display: block;
+            width: 100%;
+            padding: 9px 10px;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid;
+            position: relative;
+            &::after {
+              content: "";
+              display: block;
+              width: 0;
+              height: 1px;
+              position: absolute;
+              left: 0;
+              bottom: -1px;
+              background-color: #4a8ecc;
+              transition: width 0.3s ease-in-out;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 21px;
+      &.hover,
+      &.active {
+        color: #4a8ecc;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .language {
+    position: relative;
+    margin-right: 16px;
+    display: inline-block;
+
+    &:hover {
+      .language {
+        &__popup {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    &__nolink {
+      text-decoration: none;
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #e7e7e7;
+      box-sizing: border-box;
+      border-radius: 6px;
+      padding: 8px 15px 8px 9px;
+
+      &::after {
+        display: inline-block;
+        content: "\f078";
+        font-family: "FontAwesome";
+        font-weight: 400;
+        font-size: 12px;
+        margin: 0 0 0 5px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &__popup {
+      opacity: 0;
+      visibility: hidden;
+      padding: 5px 0;
+      position: absolute;
+      text-align: left;
+      z-index: 100;
+      transition: all 0.2s ease-out;
+      background-color: #fff;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &__item {
+      &.active {
+        a {
+          background: #f3f3f3;
+        }
+      }
+      &:last-child {
+        a {
+          margin-bottom: 0px;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 0px 3px 0px 8px;
+        margin-bottom: 6px;
+        font-size: 13px;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background: #f3f3f3;
+        }
+
+        img {
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    .btn {
+      text-decoration: none;
+      padding: 11px 18px;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      transition: all 0.3s ease-out;
+      &.active {
+        background: #4a8ecc;
+        border-radius: 6px;
+        color: #fff;
+      }
+      &:hover {
+        background: #4a8ecc;
+        border-radius: 6px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* ==================================================
+	gnav
+================================================== */
+#mainvisual {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border: 0;
+
+  &:focus {
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+  }
+}
+/* ==================================================
+	content_area
+================================================== */
+
+/* title set
+-------------------------------------------------- */
+
+/* ==================================================
+	main_content
+================================================== */
+
+/* section set
+-------------------------------------------------- */
+
+/* ==================================================
+	aside_area
+================================================== */
+
+/* ==================================================
+	footer
+================================================== */
+footer {
+  .page_up {
+    position: fixed;
+    right: -550px;
+    bottom: 120px;
+    z-index: 999;
+    @include media(sp) {
+      width: 15%;
+      bottom: 3% !important;
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+/*====================================================================================
+■02.CLEAR FLOAT
+====================================================================================*/
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: " ";
+  height: 0px;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hide these rules from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+
+/*====================================================================================
+■06.OTHER
+====================================================================================*/
+.text-normal {
+  font-weight: normal;
+}
+.text-bold {
+  font-weight: bold;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+.text-none-underline {
+  text-decoration: none !important;
+}
+
+/*====================================================================================
+■07.PAGE UP
+====================================================================================*/
+footer .page_up {
+  position: fixed;
+  right: -550px;
+  bottom: 120px;
+  z-index: 999;
+}

@@ -1,0 +1,23 @@
+default:
+  # TOP兼デフォルト用
+  title: seo
+  description: seo
+  keywords: seo
+  h1: seo
+
+seo:
+    # newslistなどディレクトリ名に重複がある場合は順番に注意
+  - page: news/?id=
+    title: seo
+    description: seo
+    keywords: seo
+    h1: seo
+
+
+
+    # コピペ用
+  # - page:
+  #   title:
+  #   description:
+  #   keywords:
+  #   h1:
