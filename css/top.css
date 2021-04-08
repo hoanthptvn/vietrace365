@@ -1,1 +1,274 @@
-/* No CSS *//*# sourceMappingURL=top.css.map */
+#main {
+  background-color: #f8f8f8;
+}
+
+.event__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 44px 0px 24px 0px;
+}
+
+.event__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.event .nav .nav-item:last-child .nav-link {
+  margin-right: 0;
+}
+
+.event .nav .nav-item .nav-link {
+  border: 0px;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  margin-right: 68px;
+}
+
+.event .nav .nav-item .nav-link.active {
+  color: #4a8ecc;
+  border-bottom: 3px solid;
+}
+
+.event-item {
+  width: 100%;
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.event-item .card {
+  border: 0;
+}
+
+.event-item .card .card-title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
+
+.event-item .card .card-body {
+  padding: 16px 20px 30px 20px;
+}
+
+.event-item__position {
+  margin-bottom: 14px;
+}
+
+.event-item__position span {
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 18px;
+  background: url("./../images/location.png") no-repeat left center;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info__left {
+  margin-right: 9px;
+}
+
+.info__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+
+.info__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__label {
+  margin-right: 10px;
+}
+
+.info__mony {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #fc5056;
+  margin-bottom: 14px;
+}
+
+.info__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+}
+
+.info__button .btn {
+  padding: 11px 11px;
+  width: calc(50% - 4px);
+  border-radius: 6px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.info__button .btn__list {
+  background: rgba(74, 142, 204, 0.14);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.info__button .btn__buy {
+  background: #4a8ecc;
+  color: #fff;
+}
+
+.calendar {
+  border: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #fc5056;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  width: 72px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.calendar__month {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  background-color: #ed1c24;
+  color: #fff;
+  padding: 5px 5px 4px 5px;
+}
+
+.calendar__date {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 2px;
+}
+
+.calendar__time {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.calendar__time img {
+  margin: 4px 5px 0px 0px;
+}
+
+.why {
+  background: url("./../images/bg01.png") no-repeat center top/cover;
+  padding: 60px 0px 67px 0px;
+}
+
+.why__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.box01 {
+  min-width: 266px;
+  min-height: 196px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ebeff3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  padding: 26px 30px 31px 30px;
+  text-align: center;
+}
+
+.box01 img {
+  margin-bottom: 30px;
+}
+
+.box01 h3 {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+
+.box01 p {
+  font-size: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.eventholder {
+  background: url("./../images/bg02.png") no-repeat center top/cover;
+  padding: 70px 0px 67px 0px;
+}
+
+.eventholder h2 {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 37px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.eventholder p {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 39px;
+}
+
+.eventholder__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.eventholder__btn .btn {
+  width: 184px;
+  height: 66px;
+  line-height: 60px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #3076b6;
+}
+/*# sourceMappingURL=top.css.map */

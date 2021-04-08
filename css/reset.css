@@ -136,10 +136,6 @@ a {
   background: transparent;
 }
 
-a:link {
-  text-decoration: underline;
-}
-
 a:focus {
   outline: none;
 }
@@ -235,7 +231,7 @@ body {
   font-size: 0.813em;
   /* 13px相当（ベース16px） */
   line-height: 1.231;
-  font-family: Verdana, Arial, Roboto, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ＭＳ Ｐゴシック", monospace, sans-serif;
+  font-family: Verdana, Arial, Roboto, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ＭＳ Ｐゴシック", monospace, sans-serif;
 }
 
 @media print {

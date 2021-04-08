@@ -29,7 +29,7 @@
         <div class="header__logo">
           <h1>
             <a href="./">
-             <img src="./images/h_logo.svg" alt="Vietrace365">
+              <img src="./images/h_logo.svg" alt="Vietrace365">
             </a>
           </h1>
         </div>
@@ -37,7 +37,8 @@
           <nav class="header__nav">
             <ul class="nav">
               <li class="nav__item"><a href="./" class="nav__link active">Trang chủ</a></li>
-              <li class="nav__item"><a href="./" class="nav__link">Sự kiện <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <li class="nav__item"><a href="./" class="nav__link">Sự kiện <i class="fa fa-chevron-down"
+                    aria-hidden="true"></i></a>
                 <ul class="sub_menu shadow rounded">
                   <li><a href="./">Sự kiện</a></li>
                   <li><a href="./">Sự kiện</a></li>
@@ -46,22 +47,24 @@
                 </ul>
               </li>
               <li class="nav__item"><a href="./" class="nav__link">Kết quả</a></li>
-              <li class="nav__item"><a href="./" class="nav__link">Hỗ trợ</a>  
-              <ul class="sub_menu shadow rounded">
-                <li><a href="./">Sự kiện</a></li>
-                <li><a href="./">Sự kiện</a></li>
-                <li><a href="./">Sự kiện</a></li>
-              </ul></li>
+              <li class="nav__item"><a href="./" class="nav__link">Hỗ trợ</a>
+                <ul class="sub_menu shadow rounded">
+                  <li><a href="./">Sự kiện</a></li>
+                  <li><a href="./">Sự kiện</a></li>
+                  <li><a href="./">Sự kiện</a></li>
+                </ul>
+              </li>
             </ul>
           </nav>
           <div class="language">
-              <a href="#" class="language__nolink">
-                <img src="./images/vietnam.png" alt="icon vietnam">  
-              </a>
-              <ul class="language__popup shadow rounded">
-                <li class="language__item active"><a href="./"><img src="./images/vietnam.png" alt="icon vietnam">Vi</a></li>
-                <li class="language__item"><a href="./"><img src="./images/vietnam.png" alt="icon english">En</a></li>
-              </ul>
+            <a href="#" class="language__nolink">
+              <img src="./images/vietnam.png" alt="icon vietnam">
+            </a>
+            <ul class="language__popup shadow rounded">
+              <li class="language__item active"><a href="./"><img src="./images/vietnam.png" alt="icon vietnam">Vi</a>
+              </li>
+              <li class="language__item"><a href="./"><img src="./images/vietnam.png" alt="icon english">En</a></li>
+            </ul>
           </div>
           <div class="header__btn">
             <a href="./" class="btn btn__login active">Đăng nhập</a>
@@ -78,9 +81,415 @@
     <!-- end mainvisual -->
     <main id="main">
       <!-- main -->
-      <div class="container">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla cum consequuntur in accusantium quasi laboriosam suscipit, incidunt perferendis dolore perspiciatis, mollitia ea excepturi dolorem voluptas voluptate recusandae repudiandae aut eaque fugiat. Libero sit repellat, nihil tenetur deleniti nulla aliquid animi omnis consequatur harum et quia natus accusamus, totam temporibus!
-      </div>
+      <!-- event -->
+      <section class="event">
+        <div class="container">
+          <div class="event__top">
+            <div class="event__title">
+              <h2>Sự kiện</h2>
+            </div>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#newest">Mới nhất</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#highlights">Nổi bật</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#upcoming">Sắp diễn ra</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#took_place">Sắp diễn ra</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div id="newest" class="container tab-pane active">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="event-item">
+                    <div class="card">
+                      <a href="/" title="Vũng Tàu Music Run 2021">
+                        <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                      </a>
+                      <div class="card-body">
+                        <div class="event-item__position">
+                          <span>Vũng Tàu Music Run 2021</span>
+                        </div>
+                        <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                        <div class="event-item__info info">
+                          <div class="info__left">
+                            <time datetime="2021-06-26 17:00:00" class="calendar">
+                              <strong class="calendar__month">tháng 6</strong>
+                              <span class="calendar__date">26</span>
+                              <em class="calendar__time">
+                                <img src="./images/clock.png" alt="icon clock">17:00
+                              </em>
+                            </time>
+                          </div>
+                          <div class="info__right">
+                            <div class="info__price">
+                              <div class="info__label">
+                                <img src="./images/tag.png" alt="icon tag">
+                              </div>
+                              <span class="info__mony">468.000 VND</span>
+                            </div>
+                            <div class="info__button">
+                              <a class="btn btn__list" href="#mua">Danh sách</a>
+                              <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="event-item">
+                    <div class="card">
+                      <a href="/" title="Vũng Tàu Music Run 2021">
+                        <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                      </a>
+                      <div class="card-body">
+                        <div class="event-item__position">
+                          <span>Vũng Tàu Music Run 2021</span>
+                        </div>
+                        <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                        <div class="event-item__info info">
+                          <div class="info__left">
+                            <time datetime="2021-06-26 17:00:00" class="calendar">
+                              <strong class="calendar__month">tháng 6</strong>
+                              <span class="calendar__date">26</span>
+                              <em class="calendar__time">
+                                <img src="./images/clock.png" alt="icon clock">17:00
+                              </em>
+                            </time>
+                          </div>
+                          <div class="info__right">
+                            <div class="info__price">
+                              <div class="info__label">
+                                <img src="./images/tag.png" alt="icon tag">
+                              </div>
+                              <span class="info__mony">468.000 VND</span>
+                            </div>
+                            <div class="info__button">
+                              <a class="btn btn__list" href="#mua">Danh sách</a>
+                              <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="event-item">
+                    <div class="card">
+                      <a href="/" title="Vũng Tàu Music Run 2021">
+                        <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                      </a>
+                      <div class="card-body">
+                        <div class="event-item__position">
+                          <span>Vũng Tàu Music Run 2021</span>
+                        </div>
+                        <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                        <div class="event-item__info info">
+                          <div class="info__left">
+                            <time datetime="2021-06-26 17:00:00" class="calendar">
+                              <strong class="calendar__month">tháng 6</strong>
+                              <span class="calendar__date">26</span>
+                              <em class="calendar__time">
+                                <img src="./images/clock.png" alt="icon clock">17:00
+                              </em>
+                            </time>
+                          </div>
+                          <div class="info__right">
+                            <div class="info__price">
+                              <div class="info__label">
+                                <img src="./images/tag.png" alt="icon tag">
+                              </div>
+                              <span class="info__mony">468.000 VND</span>
+                            </div>
+                            <div class="info__button">
+                              <a class="btn btn__list" href="#mua">Danh sách</a>
+                              <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="event-item">
+                    <div class="card">
+                      <a href="/" title="Vũng Tàu Music Run 2021">
+                        <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                      </a>
+                      <div class="card-body">
+                        <div class="event-item__position">
+                          <span>Vũng Tàu Music Run 2021</span>
+                        </div>
+                        <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                        <div class="event-item__info info">
+                          <div class="info__left">
+                            <time datetime="2021-06-26 17:00:00" class="calendar">
+                              <strong class="calendar__month">tháng 6</strong>
+                              <span class="calendar__date">26</span>
+                              <em class="calendar__time">
+                                <img src="./images/clock.png" alt="icon clock">17:00
+                              </em>
+                            </time>
+                          </div>
+                          <div class="info__right">
+                            <div class="info__price">
+                              <div class="info__label">
+                                <img src="./images/tag.png" alt="icon tag">
+                              </div>
+                              <span class="info__mony">468.000 VND</span>
+                            </div>
+                            <div class="info__button">
+                              <a class="btn btn__list" href="#mua">Danh sách</a>
+                              <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div id="highlights" class="container tab-pane fade">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="event-item">
+                    <div class="card">
+                      <a href="/" title="Vũng Tàu Music Run 2021">
+                        <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                      </a>
+                      <div class="card-body">
+                        <div class="event-item__position">
+                          <span>Vũng Tàu Music Run 2021</span>
+                        </div>
+                        <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                        <div class="event-item__info info">
+                          <div class="info__left">
+                            <time datetime="2021-06-26 17:00:00" class="calendar">
+                              <strong class="calendar__month">tháng 6</strong>
+                              <span class="calendar__date">26</span>
+                              <em class="calendar__time">
+                                <img src="./images/clock.png" alt="icon clock">17:00
+                              </em>
+                            </time>
+                          </div>
+                          <div class="info__right">
+                            <div class="info__price">
+                              <div class="info__label">
+                                <img src="./images/tag.png" alt="icon tag">
+                              </div>
+                              <span class="info__mony">468.000 VND</span>
+                            </div>
+                            <div class="info__button">
+                              <a class="btn btn__list" href="#mua">Danh sách</a>
+                              <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="row">
+                    <div class="event-item">
+                      <div class="card">
+                        <a href="/" title="Vũng Tàu Music Run 2021">
+                          <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                        </a>
+                        <div class="card-body">
+                          <div class="event-item__position">
+                            <span>Vũng Tàu Music Run 2021</span>
+                          </div>
+                          <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                          <div class="event-item__info info">
+                            <div class="info__left">
+                              <time datetime="2021-06-26 17:00:00" class="calendar">
+                                <strong class="calendar__month">tháng 6</strong>
+                                <span class="calendar__date">26</span>
+                                <em class="calendar__time">
+                                  <img src="./images/clock.png" alt="icon clock">17:00
+                                </em>
+                              </time>
+                            </div>
+                            <div class="info__right">
+                              <div class="info__price">
+                                <div class="info__label">
+                                  <img src="./images/tag.png" alt="icon tag">
+                                </div>
+                                <span class="info__mony">468.000 VND</span>
+                              </div>
+                              <div class="info__button">
+                                <a class="btn btn__list" href="#mua">Danh sách</a>
+                                <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="upcoming" class="container tab-pane fade">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="event-item">
+                  <div class="card">
+                    <a href="/" title="Vũng Tàu Music Run 2021">
+                      <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                    </a>
+                    <div class="card-body">
+                      <div class="event-item__position">
+                        <span>Vũng Tàu Music Run 2021</span>
+                      </div>
+                      <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                      <div class="event-item__info info">
+                        <div class="info__left">
+                          <time datetime="2021-06-26 17:00:00" class="calendar">
+                            <strong class="calendar__month">tháng 6</strong>
+                            <span class="calendar__date">26</span>
+                            <em class="calendar__time">
+                              <img src="./images/clock.png" alt="icon clock">17:00
+                            </em>
+                          </time>
+                        </div>
+                        <div class="info__right">
+                          <div class="info__price">
+                            <div class="info__label">
+                              <img src="./images/tag.png" alt="icon tag">
+                            </div>
+                            <span class="info__mony">468.000 VND</span>
+                          </div>
+                          <div class="info__button">
+                            <a class="btn btn__list" href="#mua">Danh sách</a>
+                            <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="event-item">
+                  <div class="card">
+                    <a href="/" title="Vũng Tàu Music Run 2021">
+                      <img class="event-item__img" src="images/img.png" alt="Vũng Tàu Music Run 2021">
+                    </a>
+                    <div class="card-body">
+                      <div class="event-item__position">
+                        <span>Vũng Tàu Music Run 2021</span>
+                      </div>
+                      <h4 class="card-title"><a href="./">Thử thách 42km - Kiến tạo tương lai</a></h4>
+                      <div class="event-item__info info">
+                        <div class="info__left">
+                          <time datetime="2021-06-26 17:00:00" class="calendar">
+                            <strong class="calendar__month">tháng 6</strong>
+                            <span class="calendar__date">26</span>
+                            <em class="calendar__time">
+                              <img src="./images/clock.png" alt="icon clock">17:00
+                            </em>
+                          </time>
+                        </div>
+                        <div class="info__right">
+                          <div class="info__price">
+                            <div class="info__label">
+                              <img src="./images/tag.png" alt="icon tag">
+                            </div>
+                            <span class="info__mony">468.000 VND</span>
+                          </div>
+                          <div class="info__button">
+                            <a class="btn btn__list" href="#mua">Danh sách</a>
+                            <a class="btn btn__buy" href="./">Mua vé ngay</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end event -->
+
+      <!-- why -->
+      <section class="why">
+        <div class="container">
+          <h2 class="why__title">Tại sao chọn chúng tôi?</h2>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="box01">
+                <img src="./images/run-shoes.png" alt="run shoes">
+                <div class="box01__content">
+                  <h3>Đa dạng các môn thể thao</h3>
+                  <p>Cổng đăng ký các giải chạy<br> bộ, đua xe đạp...</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6  col-6">
+              <div class="box01">
+                <img src="./images/wallet.png" alt="wallet">
+                <div class="box01__content">
+                  <h3>Đảm bảo giá tốt nhất</h3>
+                  <p>Nhiều chương trình<br>
+                    khuyến mãi giảm đến giá 60%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="box01">
+                <img src="./images/phone-charging.png" alt="phone charging">
+                <div class="box01__content">
+                  <h3>Nhanh chóng & dễ dàng</h3>
+                  <p>Mua vé nhanh chóng<br>
+                    thao tác đơn giản dễ sử dụng </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="box01">
+                <img src="./images/shield.png" alt="shield">
+                <div class="box01__content">
+                  <h3>An toàn và bảo mật</h3>
+                  <p>Cam kết bảo mật thông tin<br>
+                    của khách hàng</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end why -->
+
+      <!-- eventholder -->
+      <section class="eventholder">
+        <div class="container">
+          <h2>Khám phá tính năng trên Viet365 ticket</h2>
+          <p>Chúng tôi chú trọng phát triển nhiều tính năng mang đến trải nghiệm tốt nhất khi đăng ký giải chạy theo cá
+            nhân và nhóm, hãy khám phá những tính năng này để có thể đăng ký nhanh chóng cho những người đồng đội của
+            mình bạn nhé!</p>
+          <div class="eventholder__btn">
+            <a class="btn" href="./">Bắt đầu khám phá</a>
+          </div>
+
+        </div>
+      </section>
+      <!-- end eventholder -->
     </main>
     <!-- end main -->
     <footer id="footer">
@@ -91,6 +500,7 @@
   </section>
   <!-- end wrapper -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>window.jQuery || document.write('<script src="./js/jquery-1.11.1.min.js"><\/script>');</script>
   <!-- jQuery Fallback -->
   <!-- end -->

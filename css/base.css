@@ -18,7 +18,8 @@ a[href*="tel:"] {
 /* ▽ SP layout ========== */
 @media only screen and (max-width: 639px) {
   body img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -75,7 +76,7 @@ img {
 
 a {
   color: #000000;
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }
@@ -98,7 +99,7 @@ a:hover {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
-    padding: 0px;
+    padding: 0;
   }
 }
 
