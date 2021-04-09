@@ -10,6 +10,7 @@ $(function () {
 		timer = setTimeout(function () {
 			setViewport(); // viewport
 			accrodion_sp(); // accordion
+
 		}, 200);
 	});
 });
@@ -111,4 +112,25 @@ $('.menu_hidden_content > li > a').click(function (event) {
 		$('.menu_hidden_content > li > a').removeClass('opened');
 		$(this).addClass('opened');
 	}
+});
+
+function slickTop() {
+	if ($('.main-slider').length > 0) {
+		var topSlider = $('.main-slider');
+		topSlider.slick({
+			fade: true,
+			dots: true,
+			speed: 3000,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+	}
+}
+
+slickTop();
+
+$(".nav__link i").click(function () {
+	$(this).toggleClass('opened').parent(".nav__link").next('.sub_menu').slideToggle('400');
+	return false;
 });

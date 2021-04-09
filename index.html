@@ -18,6 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/utility.css">
   <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/slick.min.css">
+  <link rel="stylesheet" href="./css/slick-theme.min.css">
   <link rel="stylesheet" href="./css/top.css">
 </head>
 
@@ -54,7 +56,8 @@
                   <li><a href="./">Sự kiện</a></li>
                 </ul>
               </li>
-            </ul>
+              <label class="nav__overlay"></label>
+            </ul>         
           </nav>
           <div class="language">
             <a href="#" class="language__nolink">
@@ -73,10 +76,20 @@
         </div>
 
       </div>
+     
     </header>
     <!-- end header -->
     <section id="mainvisual">
-      <img src="./images/banner.jpg" alt="">
+      <div class="container">
+        <div class="main-slider">
+          <div class="mv">
+            <img src="./images/banner.jpg" alt="">
+          </div>
+          <div class="mv">
+            <img src="./images/banner.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </section>
     <!-- end mainvisual -->
     <main id="main">
@@ -422,6 +435,36 @@
                 </div>
               </div>
             </div>
+            <ul class="pagination home-product-pagination">
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">
+                      <i class="pagination-item__icon fa fa-angle-left"></i>
+                  </a>
+              </li>
+              <li class="pagination-item pagination-item--active">
+                  <a href="" class="pagination-item__link">1</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">2</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">3</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">5</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">...</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">14</a>
+              </li>
+              <li class="pagination-item">
+                  <a href="" class="pagination-item__link">
+                      <i class="pagination-item__icon fa fa-angle-right"></i>
+                  </a>
+              </li>
+          </ul>
           </div>
         </div>
       </section>
@@ -492,18 +535,78 @@
       <!-- end eventholder -->
     </main>
     <!-- end main -->
-    <footer id="footer">
+    <footer id="footer" class="footer">
       <!-- footer -->
-
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-6">
+              <div class="footer01">
+                <h3 class="footer__title">Vietrace365</h3>
+                <ul>
+                  <li><img src="./images/icon-home.png" alt="icon home">84CT Tam Đảo (hẻm 68 Đồng Nai),<br> Phường 15, Quận 10, TP. Hồ Chí Minh</li>
+                  <li><img src="./images/icon-phone.png" alt="icon home"><strong>VIE:&nbsp</strong><a href="tel:0967711365">0967711365</a> |&nbsp<strong> ENG:&nbsp</strong><a href="tel:0967474365">0967474365</a></li>
+                  <li><img src="./images/icon-letter.png" alt="icon letter"><a href="mailto:info@vietrace365.vn">info@vietrace365.vn</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="footer02">
+                <h3 class="footer__title">Hướng dẫn</h3>
+                <ul>
+                  <li><a href="./">• Hướng dẫn mua vé</a></li>
+                  <li><a href="./">• Câu hỏi thường gặp</a></li>
+                  <li><a href="./">• Hợp tác với chúng tôi</a></li>
+                  <li><a href="./">• Thoả thuận sự dụng</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="footer02">
+                <h3 class="footer__title">Chính sách</h3>
+                <ul>
+                  <li><a href="./">• Bảo mật thông tin</a></li>
+                  <li><a href="./">• Điều khoản sử dụng</a></li>
+                  <li><a href="./">• Thanh toán</a></li>
+                </ul>
+                <figure><img src="./images/da-thong-bao.png" alt="đã thông báo"></figure>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6">
+              <div class="footer01">
+                <h3 class="footer__title">Fanpage</h3>
+                <figure><img src="./images/fanpage.png" alt="fanpage"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="left">
+            <p><strong>© 2020 Công ty TNHH TMDV Nắng Cao Nguyên</strong> • Giấy phép/MST: 0305952229 do Sở KHDTHCM cấp ngày 29/08/2008</p>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="./"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="./"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="./"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- end footer -->
   </section>
   <!-- end wrapper -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>window.jQuery || document.write('<script src="./js/jquery-1.11.1.min.js"><\/script>');</script>
   <!-- jQuery Fallback -->
   <!-- end -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

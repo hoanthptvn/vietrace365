@@ -205,6 +205,7 @@ a:hover {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   padding: 10px 10px 0px 10px;
+  z-index: 99;
 }
 
 .header .nav__item .sub_menu::after {
@@ -222,20 +223,6 @@ a:hover {
   text-decoration: none;
   font-size: 18px;
   border-bottom: 1px solid;
-  position: relative;
-}
-
-.header .nav__item .sub_menu li a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  background-color: #4a8ecc;
-  -webkit-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
 }
 
 .header .nav__item .sub_menu li a:hover::after {
@@ -250,10 +237,6 @@ a:hover {
 
 .header .nav__link.hover, .header .nav__link.active {
   color: #4a8ecc;
-}
-
-.header .nav__link.hover::after, .header .nav__link.active::after {
-  width: 100%;
 }
 
 .header .language {
@@ -355,17 +338,87 @@ a:hover {
   color: #fff;
 }
 
+@media print, screen and (max-width: 767px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    -webkit-transition: opacity linear 0.3s, -webkit-transform linear 0.3s;
+    transition: opacity linear 0.3s, -webkit-transform linear 0.3s;
+    transition: transform linear 0.3s, opacity linear 0.3s;
+    transition: transform linear 0.3s, opacity linear 0.3s, -webkit-transform linear 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform;
+    background-color: #e7e7e7;
+    z-index: 999;
+  }
+  .header .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .header .nav__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .header .nav__item a:after {
+    content: none;
+  }
+  .header .nav__item .sub_menu {
+    top: 100%;
+    width: 100%;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header .nav__item .sub_menu:after {
+    content: none;
+  }
+  .header .nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    display: none;
+    -webkit-animation: fadeIn linear 0.2s;
+            animation: fadeIn linear 0.2s;
+  }
+  .header .nav__link {
+    display: block;
+    width: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header .nav__link:hover {
+    color: none;
+  }
+}
+
 /* ==================================================
 	gnav
 ================================================== */
 #mainvisual {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+#mainvisual .main-slider .mv img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .btn {
@@ -414,6 +467,97 @@ footer .page_up {
 }
 
 /* ========== end △ */
+.footer__title {
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 27px;
+}
+
+.footer__main {
+  padding: 60px 0px 32px;
+}
+
+.footer01 ul li {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer01 ul li img {
+  padding-top: 4px;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 14px;
+}
+
+.footer01 ul li a {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer02 ul li {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer02 ul li::after {
+  content: "";
+  position: absolute;
+}
+
+.footer02 ul li a {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer02 ul li a:hover {
+  color: #4a8ecc;
+  text-decoration: underline;
+}
+
+.footer__bottom .container {
+  border-top: 1px solid rgba(220, 221, 223, 0.7);
+  padding: 28px 0 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__bottom .container .left p {
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.footer__bottom .container .right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__bottom .container .right ul li {
+  margin-right: 24px;
+}
+
+.footer__bottom .container .right ul li i {
+  font-size: 18px;
+}
+
+.footer__bottom .container .right ul li:last-child {
+  margin-right: 0;
+}
+
 /*====================================================================================
 ■02.CLEAR FLOAT
 ====================================================================================*/

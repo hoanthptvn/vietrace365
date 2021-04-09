@@ -162,6 +162,7 @@ a:hover {
         visibility: hidden;
         transform: translateY(-20px);
         padding: 10px 10px 0px 10px;
+        z-index: 99;
         &::after {
           content: "";
           position: absolute;
@@ -177,18 +178,7 @@ a:hover {
             text-decoration: none;
             font-size: 18px;
             border-bottom: 1px solid;
-            position: relative;
-            &::after {
-              content: "";
-              display: block;
-              width: 0;
-              height: 1px;
-              position: absolute;
-              left: 0;
-              bottom: -1px;
-              background-color: #4a8ecc;
-              transition: width 0.3s ease-in-out;
-            }
+
             &:hover {
               &::after {
                 width: 100%;
@@ -205,9 +195,6 @@ a:hover {
       &.hover,
       &.active {
         color: #4a8ecc;
-        &::after {
-          width: 100%;
-        }
       }
     }
   }
@@ -307,13 +294,85 @@ a:hover {
   }
 }
 
+@media print, screen and (max-width: 767px) {
+  .header {
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 320px;
+      max-width: 100%;
+      // transform: translateX(-100%);
+      transition: transform linear 0.3s, opacity linear 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      will-change: opacity, transform;
+      background-color: #e7e7e7;
+      z-index: 999;
+    }
+    .nav {
+      flex-direction: column;
+      padding: 20px;
+      &__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: relative;
+        a {
+          &:after {
+            content: none;
+          }
+        }
+        .sub_menu {
+          top: 100%;
+          width: 100%;
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          display: none;
+          transform: translateY(0);
+          &:after {
+            content: none;
+          }
+        }
+      }
+      &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 11;
+        display: none;
+        animation: fadeIn linear 0.2s;
+      }
+      &__link {
+        display: block;
+        width: 100%;
+        transform: translateY(0);
+        &:hover {
+          color: none;
+        }
+      }
+    }
+  }
+}
+
 /* ==================================================
 	gnav
 ================================================== */
 #mainvisual {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  .main-slider {
+    .mv {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 .btn {
@@ -357,6 +416,95 @@ footer {
       bottom: 3% !important;
       a {
         display: block;
+      }
+    }
+  }
+}
+
+.footer {
+  &__title {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 27px;
+  }
+  &__main {
+    padding: 60px 0px 32px;
+  }
+}
+
+.footer01 {
+  ul {
+    li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.8);
+      img {
+        padding-top: 4px;
+        max-width: 100%;
+        object-fit: contain;
+        margin-right: 14px;
+      }
+
+      a {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
+.footer02 {
+  ul {
+    li {
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 15px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+      }
+      a {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+        &:hover {
+          color: #4a8ecc;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  &__bottom {
+    .container {
+      border-top: 1px solid rgba(220, 221, 223, 0.7);
+      padding: 28px 0 24px 0;
+      display: flex;
+      justify-content: space-between;
+      .left {
+        p {
+          margin-bottom: 0;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+      .right {
+        ul {
+          display: flex;
+          li {
+            margin-right: 24px;
+
+            i {
+              font-size: 18px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
       }
     }
   }
