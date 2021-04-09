@@ -118,9 +118,9 @@ function slickTop() {
 	if ($('.main-slider').length > 0) {
 		var topSlider = $('.main-slider');
 		topSlider.slick({
-			fade: true,
+			autoplay: true,
 			dots: true,
-			speed: 3000,
+			speed: 1500,
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1
@@ -177,4 +177,22 @@ $(".nav__link i").click(function () {
 	return false;
 });
 
-$(".nav____overlay").toggleClass("opened");
+$(".icon_close").on("click", function () {
+	$(".nav__overlay").toggleClass("active");
+	$(".header__nav").toggleClass("active");
+	return false;
+});
+
+$(".icon_menu").on("click", function () {
+	$(".nav__overlay").addClass("active");
+	$(".header__nav").addClass("active");
+	return false;
+});
+
+$(".nav__overlay").on("click", function () {
+	if ($(this).hasClass("active")) {
+		$(".nav__overlay").removeClass("active");
+		$(".header__nav").removeClass("active");
+	}
+	return false;
+});

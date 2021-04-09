@@ -31,8 +31,8 @@
   font-size: 0;
   line-height: 0;
   top: 50%;
-  width: 32px;
-  height: 45px;
+  width: 94px;
+  height: 94px;
   margin-top: -10px\9;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -100,9 +100,6 @@
 }
 [dir="rtl"] .slick-next:before {
   content: "←";
-}
-.slick-slider {
-  margin-bottom: 30px;
 }
 .slick-dots {
   bottom: -45px;

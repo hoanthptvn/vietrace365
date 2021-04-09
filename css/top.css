@@ -36,12 +36,35 @@
   border-bottom: 3px solid;
 }
 
+@media print, screen and (max-width: 767px) {
+  .event__top {
+    display: block;
+  }
+  .event__title {
+    margin-bottom: 10px;
+  }
+  .event .nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .event .nav .nav-item .nav-link {
+    margin-right: 30px;
+    font-size: 15px;
+  }
+}
+
 .event-item {
   width: 100%;
   display: inline-block;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;
+  position: relative;
+}
+
+.event-item__favorite {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 .event-item .card {
@@ -59,6 +82,12 @@
   padding: 16px 20px 30px 20px;
 }
 
+.event-item__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .event-item__position {
   margin-bottom: 14px;
 }
@@ -68,6 +97,12 @@
   font-size: 15px;
   line-height: 18px;
   background: url("./../images/location.png") no-repeat left center;
+}
+
+@media print, screen and (max-width: 767px) {
+  .event-item .card .card-title {
+    font-size: 20px;
+  }
 }
 
 .info {
@@ -126,6 +161,13 @@
   font-size: 15px;
   line-height: 18px;
   text-decoration: none;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.info__button .btn:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .info__button .btn__list {
@@ -136,6 +178,18 @@
 .info__button .btn__buy {
   background: #4a8ecc;
   color: #fff;
+}
+
+@media print, screen and (max-width: 420px) {
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info__left {
+    margin-bottom: 20px;
+  }
 }
 
 .calendar {
@@ -229,6 +283,23 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+@media (max-width: 1023px) {
+  .box01 {
+    margin-bottom: 20px;
+  }
+}
+
+@media print, screen and (max-width: 767px) {
+  .why .col-6 {
+    margin-bottom: 20px;
+  }
+  .box01 {
+    margin-bottom: 0;
+    min-width: 100%;
+    height: 100%;
+  }
+}
+
 .eventholder {
   background: url("./../images/bg02.png") no-repeat center top/cover;
   padding: 70px 0px 67px 0px;
@@ -270,6 +341,19 @@
   font-size: 16px;
   text-align: center;
   color: #3076b6;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.eventholder__btn .btn:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+@media print, screen and (max-width: 767px) {
+  .eventholder h2 {
+    font-size: 30px;
+  }
 }
 
 .home-product-pagination {
@@ -350,5 +434,109 @@
   font-size: 32px;
   line-height: 37px;
   margin-bottom: 50px;
+}
+
+.search {
+  padding-top: 28px;
+}
+
+.search__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 14px;
+  background-color: #fff;
+}
+
+.search__ipt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 12px;
+}
+
+.search__keyword {
+  width: 100%;
+  height: 48px;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 0;
+}
+
+.search__keyword:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.search__filter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.search__filter ul li {
+  margin-right: 12px;
+}
+
+.search__filter select {
+  height: 48px;
+  width: 218px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search .btn__search {
+  width: 102px;
+  height: 48px;
+  font-size: 25px;
+  border-radius: 6px;
+}
+
+@media print, screen and (max-width: 767px) {
+  .search__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search__keyword {
+    font-size: 14px;
+  }
+  .search .btn__search {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .search__ipt {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .search__filter {
+    margin-bottom: 10px;
+  }
+  .search__filter ul li {
+    width: 50%;
+  }
+  .search__filter ul li:last-child {
+    margin-right: 0;
+  }
+  .search__filter select {
+    font-size: 14px;
+    width: 100%;
+    height: 42px;
+  }
+  .search__keyword {
+    height: 42px;
+  }
+  .search .btn__search {
+    height: 42px;
+  }
 }
 /*# sourceMappingURL=top.css.map */
