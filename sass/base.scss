@@ -305,8 +305,8 @@ a:hover {
       max-width: 100%;
       // transform: translateX(-100%);
       transition: transform linear 0.3s, opacity linear 0.3s;
-      opacity: 0;
-      visibility: hidden;
+      // opacity: 0;
+      // visibility: hidden;
       will-change: opacity, transform;
       background-color: #e7e7e7;
       z-index: 999;
@@ -330,7 +330,7 @@ a:hover {
           position: static;
           opacity: 1;
           visibility: visible;
-          display: none;
+          // display: none;
           transform: translateY(0);
           &:after {
             content: none;
@@ -345,15 +345,19 @@ a:hover {
         left: 0;
         background-color: rgba(0, 0, 0, 0.2);
         z-index: 11;
-        display: none;
+        // display: none;
         animation: fadeIn linear 0.2s;
       }
       &__link {
         display: block;
         width: 100%;
         transform: translateY(0);
+        display: flex;
         &:hover {
           color: none;
+        }
+        i {
+          margin-left: auto;
         }
       }
     }

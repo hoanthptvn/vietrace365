@@ -128,9 +128,53 @@ function slickTop() {
 	}
 }
 
+function ourPartner() {
+	if ($('.ourpartner__list').length > 0) {
+		var partner = $('.ourpartner__list');
+		partner.slick({
+			autoplay: true,
+			arrows: false,
+			fade: false,
+			dots: false,
+			speed: 1500,
+			infinite: true,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+	}
+}
+
 slickTop();
+ourPartner();
 
 $(".nav__link i").click(function () {
 	$(this).toggleClass('opened').parent(".nav__link").next('.sub_menu').slideToggle('400');
 	return false;
 });
+
+$(".nav____overlay").toggleClass("opened");

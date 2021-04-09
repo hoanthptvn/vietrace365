@@ -350,8 +350,6 @@ a:hover {
     transition: opacity linear 0.3s, -webkit-transform linear 0.3s;
     transition: transform linear 0.3s, opacity linear 0.3s;
     transition: transform linear 0.3s, opacity linear 0.3s, -webkit-transform linear 0.3s;
-    opacity: 0;
-    visibility: hidden;
     will-change: opacity, transform;
     background-color: #e7e7e7;
     z-index: 999;
@@ -378,7 +376,6 @@ a:hover {
     position: static;
     opacity: 1;
     visibility: visible;
-    display: none;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -393,7 +390,6 @@ a:hover {
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 11;
-    display: none;
     -webkit-animation: fadeIn linear 0.2s;
             animation: fadeIn linear 0.2s;
   }
@@ -402,9 +398,15 @@ a:hover {
     width: 100%;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header .nav__link:hover {
     color: none;
+  }
+  .header .nav__link i {
+    margin-left: auto;
   }
 }
 
